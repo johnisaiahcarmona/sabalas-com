@@ -48,16 +48,18 @@
   &:not(.btn-raised) {
     @include variations(unquote(".btn"), unquote(""), color, $mdb-text-color-primary);
     box-shadow: none;
+    padding: 8px 0px;
+    margin: 10px 0px;
 
     &:not(.btn-link) {
       &:hover,
       &:focus {
         // spec: flat/light bg Hover: 20% #999999
-        background-color: rgba(#999999, (20/100));
+        background-color: inherit;
 
         .theme-dark & {
           // spec: dark bg Hover: 15% #CCCCCC
-          background-color: rgba(#CCCCCC, (15/100));
+          background-color: inherit;
         }
       }
     }
@@ -211,6 +213,9 @@
   .btn-group-sm & {
     padding: 5px 20px;
     font-size: $mdb-btn-font-size-sm;
+    &:not(.btn-raised) {
+      padding: 5px 0px;
+    }
 
     i.material-icons {
       font-size: $mdb-btn-font-size-sm + 6;
@@ -220,6 +225,9 @@
   .btn-group-xs & {
     padding: 4px 15px;
     font-size: $mdb-btn-font-size-xs;
+    &:not(.btn-raised) {
+      padding: 4px 0px;
+    }
 
     i.material-icons {
       font-size: $mdb-btn-font-size-xs + 6;

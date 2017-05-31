@@ -8,11 +8,10 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-  %body
-    .navbar.navbar-default
+  %body{ :style => 'padding-top: 60px;' }
+    .navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
           %a.navbar-brand{ :href => '#' }
             Juan Dela Cruz
-    .container
-      = yield
+    = yield

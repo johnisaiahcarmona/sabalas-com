@@ -24,19 +24,26 @@
     border-radius: $border-radius-base;
     color: $mdb-card-body-text;
     background: $mdb-card-body-background;
+    margin: 15px 0px;
 
     @include shadow-z-2();
 
     .card-image {
-        height: 60%;
+        height: 200px;
         position: relative;
         overflow: hidden;
-        img {
+        background-color: #000000;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        
+        .card-image-image {
             width: 100%;
             height: 100%;
-            border-top-left-radius: 2px;
-            border-top-right-radius: 2px;
             pointer-events: none;
+            opacity: 0.7;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
         }
         .card-image-headline {
             position: absolute;
