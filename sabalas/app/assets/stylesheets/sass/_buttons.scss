@@ -337,10 +337,14 @@
   }
 
   @media (max-width: 767px) {
+    & {
+      bottom: 20px;
+      right: 20px;
+    }
     .btn-fab {
-      @include shadow-z-2();
-      $mdb-btn-fab-size-float: $mdb-btn-fab-size + 10;
-      $mdb-btn-fab-font-size-float: $mdb-btn-fab-font-size + 5;
+      @include shadow-4dp();
+      $mdb-btn-fab-size-float: $mdb-btn-fab-size + 5;
+      $mdb-btn-fab-font-size-float: $mdb-btn-fab-font-size + 3;
 
       height: $mdb-btn-fab-size-float;
       width: $mdb-btn-fab-size-float;

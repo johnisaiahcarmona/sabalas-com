@@ -55,21 +55,22 @@
     }
 
     .card-body {
-        height: 30%;
         padding: 18px;
     }
 
     .card-footer {
-        height: 10%;
-        padding: 18px;
-        button, a {
-            margin: 0 !important;
-            position: relative;
-            bottom: 25px;
-            width: auto;
-            &:first-child {
-                left: -15px;
-            }
+        padding: 0px 18px 18px 18px;
+        
+        &button, &a {
+            padding: 0;
+            margin: 0;
         }
+    }
+
+    .card-footer button, 
+    .card-footer a,
+    .card-footer .btn-group {
+        padding: 0;
+        margin: 0;
     }
 }

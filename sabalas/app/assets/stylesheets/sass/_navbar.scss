@@ -10,7 +10,8 @@
     position: relative;
     height: 60px;
     line-height: 30px;
-    color: inherit;
+    color: $mdb-text-color-light;
+    font-weight: 400;
     &:hover,
     &:focus {
       color: inherit;
