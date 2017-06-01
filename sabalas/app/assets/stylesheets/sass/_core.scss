@@ -18,6 +18,16 @@ body {
     }
 
   }
+
+  ::selection {
+    background: $brand-secondary; /* WebKit/Blink Browsers */
+    color: $mdb-text-color-light;
+  }
+
+  ::-moz-selection {
+    background: $brand-secondary; /* WebKit/Blink Browsers */
+    color: $mdb-text-color-light;
+  }
 }
 
 

@@ -26,7 +26,7 @@
     background: $mdb-card-body-background;
     margin: 15px 0px;
 
-    @include shadow-z-2();
+    @include shadow-3dp();
 
     .card-image {
         height: 200px;

@@ -51,16 +51,15 @@
     padding: 8px 0px;
     margin: 10px 0px;
 
-    &:not(.btn-link) {
-      &:hover,
-      &:focus {
-        // spec: flat/light bg Hover: 20% #999999
-        background-color: inherit;
+    &:hover,
+    &:focus {
+      // spec: flat/light bg Hover: 20% #999999
+      background-color: inherit;
+      text-decoration: none;
 
-        .theme-dark & {
-          // spec: dark bg Hover: 15% #CCCCCC
-          background-color: inherit;
-        }
+      .theme-dark & {
+        // spec: dark bg Hover: 15% #CCCCCC
+        background-color: inherit;
       }
     }
   }
@@ -300,5 +299,60 @@
   .btn:active,
   .btn-group {
     margin: 0;
+  }
+}
+
+.btn-group {
+  .btn {
+    &:not(.btn-group-raised) {
+      margin-right: 24px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.btn-group-float {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+
+  .btn-fab {
+    @include shadow-z-2();
+    $mdb-btn-fab-size-float: $mdb-btn-fab-size + 20;
+    $mdb-btn-fab-font-size-float: $mdb-btn-fab-font-size + 10;
+
+    height: $mdb-btn-fab-size-float;
+    width: $mdb-btn-fab-size-float;
+    font-size: $mdb-btn-fab-font-size-float;
+
+    i.material-icons {
+      transform: translate(-(($mdb-btn-fab-font-size-float) / 2), -(($mdb-btn-fab-font-size-float) / 2));
+      line-height: $mdb-btn-fab-font-size-float;
+      width: $mdb-btn-fab-font-size-float;
+      margin: inherit;
+      font-size: inherit;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .btn-fab {
+      @include shadow-z-2();
+      $mdb-btn-fab-size-float: $mdb-btn-fab-size + 10;
+      $mdb-btn-fab-font-size-float: $mdb-btn-fab-font-size + 5;
+
+      height: $mdb-btn-fab-size-float;
+      width: $mdb-btn-fab-size-float;
+      font-size: $mdb-btn-fab-font-size-float;
+
+      i.material-icons {
+        transform: translate(-(($mdb-btn-fab-font-size-float) / 2), -(($mdb-btn-fab-font-size-float) / 2));
+        line-height: $mdb-btn-fab-font-size-float;
+        width: $mdb-btn-fab-font-size-float;
+        margin: inherit;
+        font-size: inherit;
+      }
+    }
   }
 }

@@ -112,7 +112,7 @@
       var $input = $((selector) ? selector : this.options.togglebuttonElements)
         .filter(":notmdproc")
         .data("mdproc", true)
-        .after("<span class='toggle'></span>");
+        .after("<div class='toggle'></div>");
 
       _toggleTypeFocus($input);
     },

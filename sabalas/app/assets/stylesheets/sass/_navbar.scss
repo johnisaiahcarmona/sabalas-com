@@ -4,6 +4,7 @@
   background-color: $brand-primary;
   border: 0;
   border-radius: 0;
+  @include shadow-z-1-darker();
 
   .navbar-brand {
     position: relative;

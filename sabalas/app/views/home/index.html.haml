@@ -1,4 +1,5 @@
-.container
+
+.container-fluid
   .jumbotron
     %h1
       Testing
@@ -30,8 +31,6 @@
       %a.btn.btn-primary.btn-xs{ :href => '#' }
         I don't know
         %i.material-icons explore
-      %a.btn.btn-primary.btn-fab{ :href => '' }
-        %i.material-icons search
     %form
       .form-group.label-floating
         %label{ :class => "control-label", :for => "focusedInput1" } Write something to make the label float
@@ -44,6 +43,28 @@
           .card-image-headline Testing card
         .card-body
           Lorem Ipsum Dolor sit amet asd asd asd
+          .btn-group.pull-right
+            %a.btn.btn-default{ :href => '' } Second Button
+            %a.btn.btn-primary{ :href => '' } Test
+    .col-lg-2.col-md-3.col-sm-6
+      .card
+        .card-image
+          .card-image-image{ :style => "background-image: url('http://media-cache-ec0.pinimg.com/736x/7b/5e/7f/7b5e7f809ead43fbaaf8d5bd90078449.jpg')" }
+          .card-image-headline Testing card
+        .card-body
+          Lorem Ipsum Dolor sit amet asd asd asd
+          .form
+            .form-group
+              .togglebutton
+                %label
+                  Wi-Fi
+                  %br
+                  %small What is wifi?
+                  %input{ :type => "checkbox", :checked => "" }
+              .togglebutton
+                %label
+                  Bluetooth
+                  %input{ :type => "checkbox" }
           %a.btn.btn-primary.pull-right{ :href => '' } Test
     .col-lg-2.col-md-3.col-sm-6
       .card
@@ -76,12 +97,19 @@
           .card-image-headline Testing card
         .card-body
           Lorem Ipsum Dolor sit amet asd asd asd
-          %a.btn.btn-primary.pull-right{ :href => '' } Test
-    .col-lg-2.col-md-3.col-sm-6
-      .card
-        .card-image
-          .card-image-image{ :style => "background-image: url('http://media-cache-ec0.pinimg.com/736x/7b/5e/7f/7b5e7f809ead43fbaaf8d5bd90078449.jpg')" }
-          .card-image-headline Testing card
-        .card-body
-          Lorem Ipsum Dolor sit amet asd asd asd
-          %a.btn.btn-primary.pull-right{ :href => '' } Test
+          %a.btn.btn-primary.pull-right{ :href => '' }
+            Test
+            %i.material-icons keyboard_arrow_right
+.btn-group-float
+  %button.btn.btn-danger.btn-fab{ :type => 'button', :'data-toggle' => 'modal', :'data-target' => '#complete-dialog' }
+    %i.material-icons search
+.modal.fade#complete-dialog
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %h2.modal-title Modal title
+      .modal-body
+        %p Fore aut non quem incididunt, varias reprehenderit deserunt quem offendit, cillum proident ne reprehenderit, quem ad laborum, quo possumus praetermissum, si ne illustriora, hic appellat coniunctione, do labore aliqua quo probant. In probant voluptatibus quo mentitum est laboris. Quorum mandaremus graviterque. Mentitum id velit, dolor aut litteris, ea varias illustriora, ita commodo ita ingeniis, iis nulla appellat incurreret, aut irure amet summis pariatur ita ubi quis dolore veniam proident, consequat sed ingeniis.
+      .modal-footer
+        %button.btn.btn-default{ :type => 'button', :'data-dismiss' => 'modal' } Close
+        %button.btn.btn-primary{ :type => 'button' } Save Changes
