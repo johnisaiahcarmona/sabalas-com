@@ -10,10 +10,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-  %body{ :style => 'padding-top: 60px;' }
-    .navbar.navbar-default.navbar-fixed-top
-      .container-fluid
-        .navbar-header
-          %a.navbar-brand{ :href => '#' }
-            Sabalas
+  %body
+    .navbar-fixed
+      %nav
+        .nav-wrapper
+          .container
+            %a.brand-logo{ :href => '#!' }
+              Sabalas
     = yield
