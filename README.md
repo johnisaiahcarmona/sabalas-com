@@ -14,7 +14,7 @@ To change the primary and secondary colors, change the these lines from `app/ass
     $secondary-color: color("grey", "darken-3") !default;
     $slider-indicator-color: #000000 !default;
     
-For further variables, checkout (materialize-sass)[https://github.com/mkhairi/materialize-sass] [`_variables.scss`](https://github.com/Dogfalo/materialize/blob/master/sass/components/_variables.scss).
+For further variables, checkout [materialize-sass](https://github.com/mkhairi/materialize-sass) [`_variables.scss`](https://github.com/Dogfalo/materialize/blob/master/sass/components/_variables.scss).
 
 ### Logos
 Change the following files with your desired logos:
@@ -27,7 +27,7 @@ Change the following files with your desired logos:
 All logos should be replaced because it is used in both mobile and desktop view.
 
 ## Sample Output
-This (link)[https://sabalas-com.herokuapp.com/] shows how the code if implemented to a shop. The output uses the (EyesTee Philippines)[https://www.facebook.com/eyesteeph/] shop as an example. Checkout their products!
+This [link](https://sabalas-com.herokuapp.com/) shows how the code if implemented to a shop. The output uses the [EyesTee Philippines](https://www.facebook.com/eyesteeph/) shop as an example. Checkout their products!
 
 > The sample output does not always contains the updated code from this repo.
 
