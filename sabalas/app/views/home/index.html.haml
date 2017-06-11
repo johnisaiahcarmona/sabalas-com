@@ -1,3 +1,85 @@
-.container
-  .text-flow
-    %h1.light Juan Dela Cruz
+.banner
+  %img{ :src => "#{image_path 'logo-light-large.png'}" }
+.section
+  .container.flow-text
+    %h1.light EYE-CATCHING STATEMENT TEES
+    %h2.light Buy the best quality shirt online, hassle free. With free shipping nationwide!
+  .container
+    %a.btn.btn-large.waves-effect{ :href => '#!' } START SHOPPING NOW
+.section.white
+  .container
+    %h3.light Featured &amp; Discounts
+    %h4.light Check out these products and discounts.
+    .slider
+      %ul.slides
+        %li
+          %img{ :src => "#{image_path 'temp/promo-01.jpg'}" }
+        %li
+          %img{ :src => "#{image_path 'temp/promo-02.jpg'}" }
+        %li
+          %img{ :src => "#{image_path 'temp/promo-03.jpg'}" }
+.section
+  .container
+    %h3.light New Items
+    %h4.light Set a new trend with these new items.
+    .row
+      .col.s6.m6.l4
+        .card.hoverable
+          .card-image
+            %img.materialboxed{ :src => "#{image_path 'temp/item-01.jpg'}", :'data-caption' => 'Panda Need More Sleep (White)' }
+            %a.btn-floating.halfway-fab.waves-effect
+              %i.material-icons add_shopping_cart
+          .card-content
+            .truncate Panda Need More Sleep (White)
+            %span.grey-text.text-darken-2 ₱ 299
+      .col.s6.m6.l4
+        .card.hoverable
+          .card-image
+            %img.materialboxed{ :src => "#{image_path 'temp/item-02.jpg'}", :'data-caption' => 'Panda Untensils (White)' }
+            %a.btn-floating.halfway-fab.waves-effect
+              %i.material-icons add_shopping_cart
+          .card-content
+            .truncate Panda Untensils (White)
+            %span.grey-text.text-darken-2 ₱ 299
+      .col.s6.m6.l4
+        .card.hoverable
+          .card-image
+            %img.materialboxed{ :src => "#{image_path 'temp/item-03.jpg'}", :'data-caption' => 'I Scream for Ice Cream (Black)' }
+            %a.btn-floating.halfway-fab.waves-effect
+              %i.material-icons add_shopping_cart
+          .card-content
+            .truncate I Scream for Ice Cream (Black)
+            %span.grey-text.text-darken-2 ₱ 299
+      .col.s6.m6.l4
+        .card.hoverable
+          .card-image
+            %img.materialboxed{ :src => "#{image_path 'temp/item-04.jpg'}", :'data-caption' => 'Be Cool Moustache (Black)' }
+            %a.btn-floating.halfway-fab.waves-effect
+              %i.material-icons add_shopping_cart
+          .card-content
+            .truncate Be Cool Moustache (Black)
+            %span.grey-text.text-darken-2 ₱ 299
+.section.white
+  .container
+    %h3.light How to Order
+    %h4.light Here are three easy steps on how you can easily purchase our shirts.
+    %br
+    .row.center-align
+      .col.s12.m4.l4
+        %i.material-icons.large.black-text add_shopping_cart
+        %h4 SHOP
+        %h5.light Add as many items into your shopping cart as you want. The more the merrier.
+        %br
+      .col.s12.m4.l4
+        %i.material-icons.large.black-text account_balance
+        %h4 PAY
+        %h5.light Checkout your cart and pay through bank transfer. Then send the picture of the payment details to us.
+        %br
+      .col.s12.m4.l4
+        %i.material-icons.large.black-text favorite
+        %h4 ENJOY
+        %h5.light Recieve the items after a few days, depending on your location, and wear our awesome shirt EVERYDAY!
+        %br
+    .row.center-align
+      .col.s12
+        %a.btn.btn-large.waves-effect{ :href => '#!' } MORE INFO

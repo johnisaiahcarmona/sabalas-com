@@ -1,4 +1,7 @@
 @import "materialize/components/color";
-$primary-color: color("green", "base") !default;
-$secondary-color: color("red", "base") !default;
+$primary-color: #000000 !default;
+$secondary-color: color("grey", "darken-3") !default;
+$slider-indicator-color: #000000 !default;
+
 @import 'materialize';
+@import 'site';

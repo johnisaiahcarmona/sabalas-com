@@ -1,0 +1,88 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+header, main, footer, nav {
+  padding-left: 300px;
+}
+
+.nav-wrapper .brand-logo img {
+  height: 40px;
+  width: auto;
+  margin-bottom: -8px;
+}
+
+.nav-wrapper .button-collapse {
+  margin-left: 0px;
+}
+
+.side-nav .logo img {
+  width: 200px;
+  height: auto;
+  margin: 50px;
+}
+
+.banner {
+  width: 100%;
+  padding: 150px 0px;
+  background-color: $primary-color;
+  text-align: center;
+}
+
+.banner img {
+  width: 300px;
+  height: auto;
+}
+
+.section {
+  padding: 50px 0px;
+}
+
+.notification-indicator {
+  border-radius: 999px;
+  background-color: $secondary-color;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.9em;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.nav-wrapper .notification-indicator-wrapper {
+  position: absolute;
+  padding-left: 30px;
+  top: -2px;
+}
+
+@media #{$medium-and-up} {
+  .container {
+    width: 90%;
+  }
+}
+
+@media #{$medium-and-down} {
+  .nav-wrapper .brand-logo {
+    position: relative;
+    left: 0px;
+    transform: none;
+  }
+
+  header, main, footer, nav {
+    padding-left: 0;
+  }
+
+  .banner img {
+    width: 200px;
+    height: auto;
+  }
+}
