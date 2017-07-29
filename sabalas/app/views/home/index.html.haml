@@ -1,64 +1,120 @@
-.banner
-  %img{ :src => "#{image_path 'logo-light-large.png'}" }
+.parallax-container
+  .parallax 
+    %img{ :src => "#{image_path 'banner-bg.jpg'}", :style => 'width: 100%; height: auto;' }
+  .container.flow-text.white-text{ :style => 'height: 100%;' }
+    %div{ :style => 'bottom: 0px; position: absolute;' }
+      %img.circle.z-depth-1{ :src => "#{image_path 'profile.jpg'}", :style => 'height: 200px; width: 200px;' }
+      %h1.light
+        John Isaiah Carmona
+      %h4.light{ :style => 'margin-top: -20px; padding-bottom: 20px;' }
+        SOFTWARE ENGINEER
 .section
   .container.flow-text
-    %h1.light EYE-CATCHING STATEMENT TEES
-    %h2.light Buy the best quality shirt online, hassle free. With free shipping nationwide!
+    
+    %h4.light
+      Works professionally as a software engineer for over 6 years. Loves programming, especially the challenging stuff like 
+      user experience, database design, and software architecture.
+.section.white#biography
   .container
-    %a.btn.btn-large.waves-effect{ :href => '#!' } START SHOPPING NOW
-.section.white
+    %h3.center.light BIOGRAPHY
+    %br
+    %br
+    %h4.light
+      %small
+        %ul
+          %li.valign-wrapper
+            %i.material-icons.left today
+            #{ (Time.now.to_s(:number).to_i - "1991-10-23 00:00:00".to_time.to_s(:number).to_i)/10e9.to_i } years of age
+          %li.valign-wrapper
+            %i.material-icons.left location_on
+            Mandaluyong City, Philippines
+    %br
+    %br
+    %h5 EDUCATIONAL BACKGROUND
+    %h4.light
+      Bulacan State University
+      %small
+        %ul
+          %li.valign-wrapper
+            %i.material-icons.left date_range
+            2007-2011
+          %li.valign-wrapper
+            %i.material-icons.left school
+            Bachelor of Science, major in Information Technology
+    %br
+    %br
+    %h5 WORK EXPERIENCE
+    %h4.light
+      Paramount Life &amp; General Insurance Corporation
+      %small
+        %ul
+          %li.valign-wrapper
+            %i.material-icons.left date_range
+            2011-2013
+          %li.valign-wrapper
+            %i.material-icons.left business_center
+            Software Developer, under Software Laboratories Incorporated
+        %ul
+          %li.valign-wrapper
+            %i.material-icons.left date_range
+            2013-Present
+          %li.valign-wrapper
+            %i.material-icons.left business_center
+            Software Engineer
+.section#skills-technologies
   .container
-    %h3.light Featured &amp; Discounts
-    %h4.light Check out these products and discounts.
-    .slider
-      %ul.slides
-        %li
-          %img{ :src => "#{image_path 'temp/promo-01.jpg'}" }
-        %li
-          %img{ :src => "#{image_path 'temp/promo-02.jpg'}" }
-        %li
-          %img{ :src => "#{image_path 'temp/promo-03.jpg'}" }
-.section
-  .container
-    %h3.light New Items
-    %h4.light Set a new trend with these new items.
+    %h3.center.light SKILLS &amp; TECHNOLOGIES
+    %br
+    %br
+    %h5 PROGRAMMING LANGUAGES
     .row
-      .col.s6.m6.l4
+      .col.s12.m6.l4
         .card.hoverable
-          .card-image
-            %img.materialboxed{ :src => "#{image_path 'temp/item-01.jpg'}", :'data-caption' => 'Panda Need More Sleep (White)' }
-            %a.btn-floating.halfway-fab.waves-effect
-              %i.material-icons add_shopping_cart
+          .card-image.black.white-text
+            %h1.truncate.card-title-only C#
+            %button.btn-floating.halfway-fab.waves-effect.modal-trigger{ :'data-target' => 'modal-skills-c' }
+              %i.material-icons description
           .card-content
-            .truncate Panda Need More Sleep (White)
-            %span.grey-text.text-darken-2 ₱ 299
-      .col.s6.m6.l4
+            .truncate .NET Framework 4.0-4.5, MVC 5, ASP.NET, WCF, Windows Form
+            %span.grey-text.text-darken-2.rating
+              %i.material-icons star
+              %i.material-icons star
+              %i.material-icons star
+              %i.material-icons star
+              %i.material-icons star_half
+      #modal-skills-c.modal.modal-fixed-footer
+        .modal-content
+          %h1 C#
+        .modal-footer
+          %a.modal-action.modal-close.btn-flat{ :href => "#!" } CLOSE
+      .col.s12.m6.l4
         .card.hoverable
-          .card-image
-            %img.materialboxed{ :src => "#{image_path 'temp/item-02.jpg'}", :'data-caption' => 'Panda Untensils (White)' }
+          .card-image.black.white-text
+            %h1.truncate.card-title-only RoR
             %a.btn-floating.halfway-fab.waves-effect
-              %i.material-icons add_shopping_cart
+              %i.material-icons description
           .card-content
-            .truncate Panda Untensils (White)
-            %span.grey-text.text-darken-2 ₱ 299
-      .col.s6.m6.l4
+            .truncate Asynchronous Forms, Routings
+            %span.grey-text.text-darken-2.rating
+              %i.material-icons star
+              %i.material-icons star
+              %i.material-icons star
+              %i.material-icons star_border
+              %i.material-icons star_border
+      .col.s12.m6.l4
         .card.hoverable
-          .card-image
-            %img.materialboxed{ :src => "#{image_path 'temp/item-03.jpg'}", :'data-caption' => 'I Scream for Ice Cream (Black)' }
+          .card-image.black.white-text
+            %h1.truncate.card-title-only Java
             %a.btn-floating.halfway-fab.waves-effect
-              %i.material-icons add_shopping_cart
+              %i.material-icons description
           .card-content
-            .truncate I Scream for Ice Cream (Black)
-            %span.grey-text.text-darken-2 ₱ 299
-      .col.s6.m6.l4
-        .card.hoverable
-          .card-image
-            %img.materialboxed{ :src => "#{image_path 'temp/item-04.jpg'}", :'data-caption' => 'Be Cool Moustache (Black)' }
-            %a.btn-floating.halfway-fab.waves-effect
-              %i.material-icons add_shopping_cart
-          .card-content
-            .truncate Be Cool Moustache (Black)
-            %span.grey-text.text-darken-2 ₱ 299
+            .truncate Swing Framework, Generics, Reflections
+            %span.grey-text.text-darken-2.rating
+              %i.material-icons star
+              %i.material-icons star
+              %i.material-icons star_border
+              %i.material-icons star_border
+              %i.material-icons star_border
 .section.white
   .container
     %h3.light How to Order

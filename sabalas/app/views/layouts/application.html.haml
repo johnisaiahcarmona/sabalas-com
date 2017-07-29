@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title EYESTEE
+    %title John Isaiah Carmona
     = csrf_meta_tags
     %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1' }
     %meta{ :name => 'theme-color', :content => '#000000' }
@@ -13,6 +13,8 @@
       $(document).ready(function() {
       $(".button-collapse").sideNav();
       $('.slider').slider();
+      $('.parallax').parallax();
+      $('.modal').modal();
       });
       
   %body.grey.lighten-4
@@ -20,53 +22,73 @@
       %nav
         .nav-wrapper
           .container
-            %a.button-collapse.hide-on-large-only{ :href => '#', :'data-activates' => 'sidenav' }
+            %a.button-collapse.hide-on-large-only{ :href => '#!', :'data-activates' => 'sidenav' }
               %i.material-icons menu
-            %a.brand-logo{ :href => '#!' }
-              %img.hide-on-med-and-down{ :src => "#{image_path 'logo-light.png'}" }
-              %img.hide-on-large-only{ :src => "#{image_path 'logo-light-small.png'}" }
-            %ul.right
-              %li
-                %a{ :href => '#!' }
-                  .notification-indicator-wrapper
-                    .notification-indicator 99
-                  %i.material-icons.white-text shopping_cart
+            %a.brand-logo
+              John Isaiah Carmona
                   
     %ul#sidenav.side-nav.fixed
       %li.logo
         %img{ :src => "#{image_path 'logo-dark.png'}" }
       %li
-        %a.waves-effect{ :href => '#!' } Home
+        %a.waves-effect{ :href => '.#biography' } Biography
       %li
-        %a.waves-effect{ :href => '#!' } Categories
-      %li
-        %a.waves-effect{ :href => '#!' } How to Pay
+        %ul.collapsible.collapsible-accordion
+          %li
+            %a.collapsible-header.waves-effect Skills &amp; Technologies
+            .collapsible-body
+              %ul
+                %li
+                  %a.waves-effect{ :href => '#!' } Programming Languages
+                %li
+                  %a.waves-effect{ :href => '#!' } User Experience
+                %li
+                  %a.waves-effect{ :href => '#!' } Methodologies
+                %li
+                  %a.waves-effect{ :href => '#!' } Database
+                %li
+                  %a.waves-effect{ :href => '#!' } Software Architecture
+          %li
+            %a.collapsible-header.waves-effect Projects &amp; Responsibilities
+            .collapsible-body
+              %ul
+                %li
+                  %a.waves-effect{ :href => '#!' } 3-Tier Image Uploading System
+                %li
+                  %a.waves-effect{ :href => '#!' } Integrated Web System
+                %li
+                  %a.waves-effect{ :href => '#!' } Document Management System
+                %li
+                  %a.waves-effect{ :href => '#!' } MVC Charts &amp; Reporting
+                %li
+                  %a.waves-effect{ :href => '#!' } Public Ruby on Rails Website
+                %li
+                  %a.waves-effect{ :href => '#!' } Reporting Web Service Project
+                %li
+                  %a.waves-effect{ :href => '#!' } Other Notable Mention
       %li
         %a.waves-effect{ :href => '#!' } Contact
-      %li
-        %a.waves-effect{ :href => '#!' } About
     %main
       = yield
     %footer.page-footer
       .container
         .row
           .col.l6.s12
-            %h5.white-text EYESTEE
-            %p.grey-text.text-lighten-4 The best quality shirt you can find online for only ₱ 299 with free shipping nationwide.
+            %h5.white-text John Isaiah Carmona Porfolio
+            %p.grey-text.text-lighten-4 The information stated in this website is hereby declared to be true by myself. Checkout my other online profiles.
           .col.l4.offset-l2.s12
             %h5.white-text Links
             %ul
               %li
-                %a.grey-text.text-lighten-3{ :href => '#!' } Facebook Page
+                %a.grey-text.text-lighten-3{ :href => '#!' } LinkedIn Profile
               %li
-                %a.grey-text.text-lighten-3{ :href => '#!' } Instagram
+                %a.grey-text.text-lighten-3{ :href => '#!' } StackOverflow Careers
               %li
-                %a.grey-text.text-lighten-3{ :href => '#!' } Privacy
+                %a.grey-text.text-lighten-3{ :href => '#!' } GitHub Account
               %li
-                %a.grey-text.text-lighten-3{ :href => '#!' } Terms
+                %a.grey-text.text-lighten-3{ :href => '#!' } Kalibrr
       .footer-copyright
         .container
-          %small &copy; #{ DateTime.now.year } EYESTEE Philippines
           %a.grey-text.text-lighten-4.right.hide-on-small-only{ :href => '#!' }
             %small Website developed by John Isaiah Carmona
           %a.grey-text.text-lighten-4.hide-on-med-and-up{ :href => '#!' }
